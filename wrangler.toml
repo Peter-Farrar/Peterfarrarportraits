@@ -1,0 +1,22 @@
+compatibility2026-nodejs_compat"]
+
+[assets = "."
+exclude = [".git", "node_modules", ".wrangler users report `wrangler.toml` is processed differently than `wrangler.jsonc`. and retry build.
+
+---
+
+**I am truly sorry I cannot fix this directly.** The API authentication is completely. Support fastest path now**The 1000 file limit is ONLY for dashboard drag-and-drop.** The `npx wrangler pages deploy` command in your terminal has **NO file limit** — it can handle thousands of files.
+
+You tried the web upload, not the terminal command. They are completely different.
+
+---
+
+### **USE TERMINAL — NO FILE LIMIT**
+
+**Step 1:** Copy your website files to a new folder on your Desktop (NO `.git` folder)
+
+**Step 2:** Open Terminal (Mac) or Command Prompt (Windows)
+
+**Step 3:** Log in:
+```bash
+npx wrangler login
