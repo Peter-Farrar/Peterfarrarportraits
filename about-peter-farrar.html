@@ -474,6 +474,25 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { transition: none !important; }
     }
+.page-hero {
+    position: relative;
+}
+
+.page-hero-content {
+    position: absolute;
+    bottom: 12%;
+    right: 6%;
+    z-index: 5;
+    text-align: right;
+}
+
+.page-eyebrow {
+    display: block;
+    color: var(--gold);
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+}
   </style>
 </head>
 
@@ -624,10 +643,6 @@
     </div>
   </div>
 </section>
-
-        </div>
-      </div>
-    </section>
 
     <!-- ── CTA ── -->
     <section class="cta-banner" aria-labelledby="cta-heading">
