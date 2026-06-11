@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-08STG260DS');
 </script>
   <meta charset="UTF-8" />
@@ -17,13 +16,13 @@
   <title>Portrait Photography Gallery | Peter Farrar Portraits, Basingstoke</title>
   <meta name="description" content="Browse Peter Farrar's portrait photography gallery. Studio and location portraits for individuals, families and professionals in Basingstoke and Hampshire." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.peterfarrarportraits.com/gallery" />
+  <link rel="canonical" href="https://www.peterfarrarportraits.com/portrait-gallery" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Portrait Photography Gallery | Peter Farrar Portraits, Basingstoke" />
   <meta property="og:description" content="Browse Peter Farrar's portrait photography gallery. Studio and location portraits for individuals, families and professionals in Basingstoke and Hampshire." />
-  <meta property="og:url" content="https://www.peterfarrarportraits.com/gallery" />
+  <meta property="og:url" content="https://www.peterfarrarportraits.com/portrait-gallery" />
   <meta property="og:image" content="https://www.peterfarrarportraits.com/images/og-gallery.jpg" />
   <meta property="og:site_name" content="Peter Farrar Portraits" />
   <meta property="og:locale" content="en_GB" />
@@ -46,11 +45,11 @@
     "@type": "ImageGallery",
     "name": "Peter Farrar Portraits — Portrait Photography Gallery",
     "description": "A selection of studio and location portrait photography by Peter Farrar, based in Basingstoke, Hampshire.",
-    "url": "https://www.peterfarrarportraits.com/gallery",
+    "url": "https://www.peterfarrarportraits.com/portrait-gallery",
     "author": {
       "@type": "Person",
       "name": "Peter Farrar",
-      "url": "https://www.peterfarrarportraits.com/about"
+      "url": "https://www.peterfarrarportraits.com/about-peter-farrar"
     },
     "provider": {
       "@type": "LocalBusiness",
@@ -61,6 +60,7 @@
   </script>
 
   <style>
+    /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -144,8 +144,7 @@
     }
 
     .nav-links a:hover,
-    .nav-links a[aria-current="page"] {color: var(--gold);
-    }
+    .nav-links a[aria-current="page"] { color: var(--gold); }
 
     .nav-cta {
       border: 1px solid var(--gold) !important;
@@ -159,15 +158,22 @@
       color: var(--black) !important;
     }
 
-    /* ── Hero ── */
-    .hero {
+    /* ── Hamburger ── */
+    .nav-toggle { display: none; flex-direction: column; justify-content: space-between; width: 26px; height: 18px; background: none; border: none; cursor: pointer; padding: 0; z-index: 200; }
+    .nav-toggle span { display: block; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s ease; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* ── Page Hero ── */
+    .page-hero {
       position: relative;
       height: 100svh;
       min-height: 600px;
       overflow: hidden;
     }
 
-    .hero-img {
+    .page-hero-img {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -176,18 +182,18 @@
       object-position: center top;
     }
 
-    .hero-overlay {
+    .page-hero-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(
         120deg,
         rgba(0,0,0,0.15) 0%,
         rgba(0,0,0,0.05) 45%,
-        rgba(0,0,0,0.55) 100%
+        rgba(0,0,0,0.65) 100%
       );
     }
 
-    .hero-content {
+    .page-hero-content {
       position: absolute;
       bottom: 12%;
       right: 6%;
@@ -195,7 +201,7 @@
       max-width: 420px;
     }
 
-    .hero-eyebrow {
+    .page-eyebrow {
       display: block;
       font-size: 0.7rem;
       letter-spacing: 0.25em;
@@ -204,22 +210,13 @@
       margin-bottom: 0.75rem;
     }
 
-    .hero-title {
+    .page-hero-content h1 {
       font-family: 'Georgia', serif;
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
       font-weight: 400;
       line-height: 1.1;
       color: var(--white);
       letter-spacing: 0.04em;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-sub {
-      font-size: 0.9rem;
-      color: rgba(245,242,238,0.8);
-      margin-bottom: 2rem;
-      line-height: 1.6;
-      font-style: italic;
     }
 
     /* ── Sections ── */
@@ -282,14 +279,14 @@
 
     .mySlides.active { display: block; }
 
-.mySlides img {
-  width: 100%;
-  height: auto;
-  max-height: 520px;
-  object-fit: cover;
-  object-position: center 20%;
-  display: block;
-}
+    .mySlides img {
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
 
     .caption-text {
       position: absolute;
@@ -524,6 +521,18 @@
     @media (max-width: 768px) {
       .site-nav { padding: 0 1.25rem; }
       .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.98); justify-content: center; align-items: center; gap: 2.5rem; z-index: 150; }
+      .nav-links.open a { font-size: 1rem; letter-spacing: 0.2em; }
+
+      .page-hero-content {
+        right: 5%;
+        left: 5%;
+        bottom: 10%;
+        text-align: left;
+        max-width: 100%;
+      }
+
       .mySlides img { height: 320px; }
       .session-types { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
@@ -542,12 +551,15 @@
 <body>
 
   <!-- ── Navigation ── -->
-  <nav class="site-nav" aria-label="Main navigation">
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
     <a href="/" class="nav-logo" aria-label="Peter Farrar Portraits home">
       <img src="/images/favicon.png" alt="Peter Farrar Portraits logo" width="44" height="44" />
       <span class="nav-logo-text">Peter Farrar<br>Portraits</span>
     </a>
-    <ul class="nav-links" role="list">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
       <li><a href="/">Home</a></li>
       <li><a href="/about-peter-farrar">About</a></li>
       <li><a href="/portrait-gallery" aria-current="page">Gallery</a></li>
@@ -629,34 +641,34 @@
           </div>
 
           <div class="mySlides">
-            <img src="/images/2withbaby.png" alt="Portrait of a prevous wedding couple and their new baby by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
-            <div class="caption-text">couple with new baby</div>
+            <img src="/images/2withbaby.png" alt="Portrait of a previous wedding couple and their new baby by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Couple with new baby</div>
           </div>
-          
+
           <div class="mySlides">
             <img src="/images/clemene.png" alt="Portrait of Clemene by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
             <div class="caption-text">Clemene</div>
           </div>
-          
-          <button class="slide-prev" onclick="plusSlides(-1)" aria-label="Previous portrait">&#10094;</button>
-          <button class="slide-next" onclick="plusSlides(1)" aria-label="Next portrait">&#10095;</button>
+
+          <button class="slide-prev" aria-label="Previous portrait">&#10094;</button>
+          <button class="slide-next" aria-label="Next portrait">&#10095;</button>
         </div>
 
         <div class="slide-dots" role="tablist" aria-label="Portrait slideshow navigation">
-          <button class="dot active" onclick="goToSlide(0)" aria-label="Portrait 1" role="tab"></button>
-          <button class="dot" onclick="goToSlide(1)" aria-label="Portrait 2" role="tab"></button>
-          <button class="dot" onclick="goToSlide(2)" aria-label="Portrait 3" role="tab"></button>
-          <button class="dot" onclick="goToSlide(3)" aria-label="Portrait 4" role="tab"></button>
-          <button class="dot" onclick="goToSlide(4)" aria-label="Portrait 5" role="tab"></button>
-          <button class="dot" onclick="goToSlide(5)" aria-label="Portrait 6" role="tab"></button>
-          <button class="dot" onclick="goToSlide(6)" aria-label="Portrait 7" role="tab"></button>
-          <button class="dot" onclick="goToSlide(7)" aria-label="Portrait 8" role="tab"></button>
-          <button class="dot" onclick="goToSlide(8)" aria-label="Portrait 9" role="tab"></button>
+          <button class="dot active" aria-label="Portrait 1" role="tab"></button>
+          <button class="dot" aria-label="Portrait 2" role="tab"></button>
+          <button class="dot" aria-label="Portrait 3" role="tab"></button>
+          <button class="dot" aria-label="Portrait 4" role="tab"></button>
+          <button class="dot" aria-label="Portrait 5" role="tab"></button>
+          <button class="dot" aria-label="Portrait 6" role="tab"></button>
+          <button class="dot" aria-label="Portrait 7" role="tab"></button>
+          <button class="dot" aria-label="Portrait 8" role="tab"></button>
+          <button class="dot" aria-label="Portrait 9" role="tab"></button>
         </div>
       </div>
     </section>
 
-    <!-- ── Below gallery text ── -->
+    <!-- ── Below gallery text ── */
     <section class="gallery-below" aria-labelledby="sessions-heading">
       <div class="gallery-below-inner">
         <span class="section-label">Book Your Session</span>
@@ -725,6 +737,33 @@
   </footer>
 
   <script>
+    // Scroll-aware nav background
+    const nav = document.getElementById('site-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // Mobile hamburger
+    const toggle = document.getElementById('nav-toggle');
+    const links  = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Slideshow
     let currentSlide = 0;
     const slides = document.querySelectorAll('.mySlides');
     const dots = document.querySelectorAll('.dot');
@@ -739,6 +778,13 @@
 
     function plusSlides(n) { showSlide(currentSlide + n); }
     function goToSlide(n) { showSlide(n); }
+
+    // Wire up prev/next buttons
+    document.querySelector('.slide-prev').addEventListener('click', () => plusSlides(-1));
+    document.querySelector('.slide-next').addEventListener('click', () => plusSlides(1));
+
+    // Wire up dots
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
 
     // Auto-advance every 5 seconds
     let autoplay = setInterval(() => plusSlides(1), 5000);
