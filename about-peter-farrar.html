@@ -106,6 +106,11 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 2.5rem;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, transparent 100%);
+      transition: background 0.3s ease;
+    }
+
+    .site-nav.scrolled {
       background: rgba(10,10,10,0.97);
     }
 
@@ -147,7 +152,9 @@
     }
 
     .nav-links a:hover,
-    .nav-links a[aria-current="page"] { color: var(--gold); }
+    .nav-links a[aria-current="page"] {
+      color: var(--gold);
+    }
 
     .nav-cta {
       border: 1px solid var(--gold) !important;
@@ -161,54 +168,73 @@
       color: var(--black) !important;
     }
 
-    /* ── Page Hero ── */
-    .page-hero {
+    /* ── Hero ── */
+    .hero {
       position: relative;
-      height: 55vh;
-      min-height: 380px;
+      height: 100svh;
+      min-height: 600px;
       overflow: hidden;
-      margin-top: var(--nav-h);
     }
 
-    .page-hero-img {
+    .hero-img {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 30%;
+      object-position: center top;
     }
 
-    .page-hero-overlay {
+    .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+      background: linear-gradient(
+        120deg,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.05) 45%,
+        rgba(0,0,0,0.55) 100%
+      );
     }
 
-    .page-hero-content {
+    .hero-content {
       position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      width: 100%;
-      padding: 0 2rem;
+      bottom: 12%;
+      right: 6%;
+      text-align: right;
+      max-width: 420px;
     }
 
-    .page-eyebrow {
+    .hero-eyebrow {
       display: block;
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.75rem;
     }
 
-    .page-hero-content h1 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
+    .hero-title {
+      font-family: 'Georgia', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
       font-weight: 400;
+      line-height: 1.1;
       color: var(--white);
       letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-sub {
+      font-size: 0.9rem;
+      color: rgba(245,242,238,0.8);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
     }
 
     /* ── Content ── */
@@ -536,57 +562,68 @@
     </section>
 
     <!-- ── Videos ── -->
-    <section class="video-section" aria-labelledby="video-heading">
-      <div class="video-section-inner">
-        <span class="section-label" style="color:var(--gold);">Behind the Lens</span>
-        <h2 id="video-heading">Peter Farrar in Action</h2>
-        <p class="video-section-sub">A selection of film and testimonial work from across the years.</p>
-        <div class="video-grid">
+<section class="video-section" aria-labelledby="video-heading">
+  <div class="video-section-inner">
+    <span class="section-label" style="color:var(--gold);">Behind the Lens</span>
+    <h2 id="video-heading">Peter Farrar in Action</h2>
+    <p class="video-section-sub">A selection of film and testimonial work from across the years.</p>
 
-          <article class="video-card">
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/nLftjARCG68"
-                title="Wedding Testimonial — Peter Farrar Portraits"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-caption">
-              <strong>Wedding Testimonial</strong>
-              <p>Testimonial from a wedding couple after their wedding day. They later visited my studio for a relaxed chat and kindly shared their experience of working with me.</p>
-            </div>
-          </article>
+    <div class="video-grid">
 
-          <article class="video-card">
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/UBt30x_ohE4"
-                title="A Couple's Love Story — Peter Farrar Portraits"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-caption">
-              <strong>A Couple's Love Story</strong>
-              <p>A romantic love story filmed at the beautiful Land of Oz and Beach Mountain area of North Carolina, USA.</p>
-            </div>
-          </article>
+      <article class="video-card">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/nLftjARCG68?rel=0&modestbranding=1"
+            loading="eager"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Wedding Testimonial — Peter Farrar Portraits"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-caption">
+          <strong>Wedding Testimonial</strong>
+          <p>Testimonial from a wedding couple after their wedding day. They later visited my studio for a relaxed chat and kindly shared their experience of working with me.</p>
+        </div>
+      </article>
 
-          <article class="video-card">
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/rB7kJ6tSQKg"
-                title="Studio Time-Lapse — Peter Farrar Portraits"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-caption">
-              <strong>Studio Time-Lapse</strong>
-              <p>A behind-the-scenes time-lapse filmed in my Charlotte, North Carolina studio featuring my good friend Amy Castro HMUA.</p>
-            </div>
-          </article>
+      <article class="video-card">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/UBt30x_ohE4?rel=0&modestbranding=1"
+            loading="eager"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="A Couple's Love Story — Peter Farrar Portraits"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-caption">
+          <strong>A Couple's Love Story</strong>
+          <p>A romantic love story filmed at the beautiful Land of Oz and Beach Mountain area of North Carolina, USA.</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/rB7kJ6tSQKg?rel=0&modestbranding=1"
+            loading="eager"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Studio Time-Lapse — Peter Farrar Portraits"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-caption">
+          <strong>Studio Time-Lapse</strong>
+          <p>A behind-the-scenes time-lapse filmed in my Charlotte, North Carolina studio featuring my good friend Amy Castro HMUA.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
         </div>
       </div>
