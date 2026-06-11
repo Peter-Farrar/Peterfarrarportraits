@@ -220,9 +220,7 @@
     }
 
     /* ── Sections ── */
-    .section {
-      padding: 5rem 2rem;
-    }
+    .section { padding: 5rem 2rem; }
 
     .section-inner {
       max-width: var(--max-w);
@@ -337,6 +335,7 @@
       justify-content: center;
       gap: 0.5rem;
       margin-top: 1.25rem;
+      flex-wrap: wrap;
     }
 
     .dot {
@@ -650,6 +649,51 @@
             <div class="caption-text">Clemene</div>
           </div>
 
+          <div class="mySlides">
+            <img src="/images/couple-shot.png" alt="Romantic couple portrait session by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Couple Portrait</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="/images/family-portraits1.jpg" alt="Natural family portrait session by Peter Farrar Portraits, Basingstoke" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Family Portrait</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="/images/family-portraits2.jpg" alt="Relaxed outdoor family portrait by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Family Portrait</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="/images/hood-portrait.png" alt="Creative hooded portrait with dramatic lighting by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Creative Portrait</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="/images/jamie.png" alt="Individual portrait of Jamie by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Jamie</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="/images/mature-portrait.jpg" alt="Classic mature portrait session by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Classic Portrait</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="/images/sharp-man.png" alt="Sharp professional male portrait by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Professional Portrait</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="/images/mom-dad.jpg" alt="Warm portrait of a couple by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Couple Portrait</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="/images/still-love.png" alt="Tender couple portrait capturing enduring love by Peter Farrar Portraits" width="780" height="560" loading="lazy" />
+            <div class="caption-text">Still in Love</div>
+          </div>
+
           <button class="slide-prev" aria-label="Previous portrait">&#10094;</button>
           <button class="slide-next" aria-label="Next portrait">&#10095;</button>
         </div>
@@ -664,11 +708,20 @@
           <button class="dot" aria-label="Portrait 7" role="tab"></button>
           <button class="dot" aria-label="Portrait 8" role="tab"></button>
           <button class="dot" aria-label="Portrait 9" role="tab"></button>
+          <button class="dot" aria-label="Portrait 10" role="tab"></button>
+          <button class="dot" aria-label="Portrait 11" role="tab"></button>
+          <button class="dot" aria-label="Portrait 12" role="tab"></button>
+          <button class="dot" aria-label="Portrait 13" role="tab"></button>
+          <button class="dot" aria-label="Portrait 14" role="tab"></button>
+          <button class="dot" aria-label="Portrait 15" role="tab"></button>
+          <button class="dot" aria-label="Portrait 16" role="tab"></button>
+          <button class="dot" aria-label="Portrait 17" role="tab"></button>
+          <button class="dot" aria-label="Portrait 18" role="tab"></button>
         </div>
       </div>
     </section>
 
-    <!-- ── Below gallery text ── */
+    <!-- ── Below gallery text ── -->
     <section class="gallery-below" aria-labelledby="sessions-heading">
       <div class="gallery-below-inner">
         <span class="section-label">Book Your Session</span>
@@ -779,17 +832,13 @@
     function plusSlides(n) { showSlide(currentSlide + n); }
     function goToSlide(n) { showSlide(n); }
 
-    // Wire up prev/next buttons
     document.querySelector('.slide-prev').addEventListener('click', () => plusSlides(-1));
     document.querySelector('.slide-next').addEventListener('click', () => plusSlides(1));
 
-    // Wire up dots
     dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
 
-    // Auto-advance every 5 seconds
     let autoplay = setInterval(() => plusSlides(1), 5000);
 
-    // Pause autoplay on manual interaction
     document.querySelectorAll('.slide-prev, .slide-next, .dot').forEach(el => {
       el.addEventListener('click', () => {
         clearInterval(autoplay);
@@ -797,7 +846,6 @@
       });
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', e => {
       if (e.key === 'ArrowLeft') plusSlides(-1);
       if (e.key === 'ArrowRight') plusSlides(1);
