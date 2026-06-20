@@ -1,0 +1,26 @@
+# ============================
+# Standard Robots Directives
+# ============================
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.peterfarrarportraits.com/sitemap.xml
+
+# ============================
+# AI Content Signals
+# ============================
+# search=yes     → Allow search engines to index normally
+# ai-input=no    → Block use of content for AI grounding / RAG
+# ai-train=no    → Block use of content for AI model training
+
+content-signals: search=yes
+content-signals: ai-input=no
+content-signals: ai-train=no
+
+# ============================
+# Legal Notice
+# ============================
+# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF
+# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT
+# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.
