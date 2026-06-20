@@ -14,9 +14,9 @@ Peter Farrar is a professional portrait photographer offering studio and locatio
 Basingstoke, Hampshire, UK
 
 ## Website
-- Homepage: https://www.peterfarrarportraits.com/
-- Gallery: https://www.peterfarrarportraits.com/gallery.html
-- Investment: https://www.peterfarrarportraits.com/investment.html
-- About: https://www.peterfarrarportraits.com/about.html
-- Contact: https://www.peterfarrarportraits.com/contact.html
-- Journal: https://www.peterfarrarportraits.com/blog/
+- [Homepage](https://www.peterfarrarportraits.com/)
+- [Gallery](https://www.peterfarrarportraits.com/gallery.html)
+- [Investment](https://www.peterfarrarportraits.com/investment.html)
+- [About](https://www.peterfarrarportraits.com/about.html)
+- [Contact](https://www.peterfarrarportraits.com/contact.html)
+- [Journal](https://www.peterfarrarportraits.com/blog/)
