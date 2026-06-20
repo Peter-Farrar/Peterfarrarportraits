@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-08STG260DS"></script>
+  <!-- Google tag (gtag.js) — deferred to window load -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-08STG260DS');
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-08STG260DS';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-08STG260DS');
+    });
   </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -37,6 +45,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="/images/hero.jpg" fetchpriority="high">
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
