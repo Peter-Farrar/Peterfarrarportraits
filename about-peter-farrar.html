@@ -57,11 +57,11 @@
       },
       "knowsAbout": ["Portrait Photography", "Wedding Photography", "Commercial Photography", "Visual Storytelling", "Photography Education"],
       "sameAs": [
-  "https://www.facebook.com/peterfarrarportraits",
-  "https://www.instagram.com/peterfarrarportraits",
-  "https://x.com/peterfportraits",
-  "https://www.threads.com/@peterfarrarportraits"
-]
+        "https://www.facebook.com/peterfarrarportraits",
+        "https://www.instagram.com/peterfarrarportraits",
+        "https://x.com/peterfportraits",
+        "https://www.threads.com/@peterfarrarportraits"
+      ]
     }
   }
   </script>
@@ -109,65 +109,19 @@
       transition: background 0.3s ease;
     }
 
-    .site-nav.scrolled {
-      background: rgba(10,10,10,0.97);
-    }
+    .site-nav.scrolled { background: rgba(10,10,10,0.97); }
 
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-logo img { width: 44px; height: 44px; border-radius: 50%; }
+    .nav-logo-text { font-family: 'Georgia', serif; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); line-height: 1.2; }
 
-    .nav-logo img {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-    }
+    .nav-links { display: flex; list-style: none; gap: 2.25rem; align-items: center; }
+    .nav-links a { font-family: 'Georgia', serif; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,242,238,0.85); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--gold); }
 
-    .nav-logo-text {
-      font-family: 'Georgia', serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--white);
-      line-height: 1.2;
-    }
+    .nav-cta { border: 1px solid var(--gold) !important; padding: 0.45rem 1.1rem !important; color: var(--gold) !important; transition: background 0.2s, color 0.2s !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--black) !important; }
 
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 2.25rem;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-family: 'Georgia', serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(245,242,238,0.85);
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"] {
-      color: var(--gold);
-    }
-
-    .nav-cta {
-      border: 1px solid var(--gold) !important;
-      padding: 0.45rem 1.1rem !important;
-      color: var(--gold) !important;
-      transition: background 0.2s, color 0.2s !important;
-    }
-
-    .nav-cta:hover {
-      background: var(--gold) !important;
-      color: var(--black) !important;
-    }
-
-    /* ── Hamburger ── */
     .nav-toggle { display: none; flex-direction: column; justify-content: space-between; width: 26px; height: 18px; background: none; border: none; cursor: pointer; padding: 0; z-index: 200; }
     .nav-toggle span { display: block; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s ease; }
     .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
@@ -175,77 +129,17 @@
     .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
     /* ── Page Hero ── */
-    .page-hero {
-      position: relative;
-      height: 100svh;
-      min-height: 600px;
-      overflow: hidden;
-    }
-
-    .page-hero-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .page-hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        120deg,
-        rgba(0,0,0,0.15) 0%,
-        rgba(0,0,0,0.05) 45%,
-        rgba(0,0,0,0.65) 100%
-      );
-    }
-
-    .page-hero-content {
-      position: absolute;
-      bottom: 12%;
-      right: 6%;
-      text-align: right;
-      max-width: 420px;
-    }
-
-    .page-eyebrow {
-      display: block;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.75rem;
-    }
-
-    .page-hero-content h1 {
-      font-family: 'Georgia', serif;
-      font-size: clamp(2rem, 4.5vw, 3.4rem);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--white);
-      letter-spacing: 0.04em;
-    }
+    .page-hero { position: relative; height: 100svh; min-height: 600px; overflow: hidden; }
+    .page-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 45%, rgba(0,0,0,0.65) 100%); }
+    .page-hero-content { position: absolute; bottom: 12%; right: 6%; text-align: right; max-width: 420px; }
+    .page-eyebrow { display: block; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .page-hero-content h1 { font-family: 'Georgia', serif; font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 400; line-height: 1.1; color: var(--white); letter-spacing: 0.04em; }
 
     /* ── Section base ── */
-    .section {
-      padding: 5rem 2rem;
-    }
-
-    .section-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-    }
-
-    .section-label {
-      display: block;
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
+    .section { padding: 5rem 2rem; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label { display: block; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
 
     /* ── Bio ── */
     .bio { background: var(--white); }
@@ -260,195 +154,159 @@
       line-height: 1.75;
     }
 
-    .bio p {
-      font-size: 0.95rem;
-      color: #3a3a3a;
-      margin-bottom: 1rem;
+    .bio p { font-size: 0.95rem; color: #3a3a3a; margin-bottom: 1rem; }
+
+    .bio-section { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid rgba(0,0,0,0.08); }
+    .bio-section h2 { font-size: clamp(1.2rem, 2.2vw, 1.65rem); font-weight: 400; color: var(--dark); margin-bottom: 1.25rem; }
+
+    /* ── Credentials strip ── */
+    .credentials-strip {
+      background: var(--dark);
+      padding: 3.5rem 2rem;
     }
 
-    .bio-section {
-      margin-top: 3rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(0,0,0,0.08);
+    .credentials-strip-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
     }
 
-    .bio-section h2 {
-      font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+    .cred-item { display: flex; flex-direction: column; align-items: center; }
+    .cred-num { font-family: 'Georgia', serif; font-size: 2.2rem; color: var(--gold); font-weight: 400; line-height: 1; margin-bottom: 0.4rem; }
+    .cred-label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,242,238,0.6); }
+
+    /* ── Why Peter block ── */
+    .why-section {
+      background: #f9f7f4;
+      padding: 5rem 2rem;
+      border-top: 1px solid rgba(0,0,0,0.07);
+    }
+
+    .why-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .why-inner h2 {
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
       font-weight: 400;
       color: var(--dark);
       margin-bottom: 1.25rem;
     }
 
-    /* ── Video section ── */
-    .video-section {
-      background: var(--dark);
-      padding: 5rem 2rem;
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+      margin-top: 2rem;
     }
 
-    .video-section-inner {
+    .why-item {
+      padding: 1.5rem;
+      background: var(--white);
+      border-left: 2px solid var(--gold);
+    }
+
+    .why-item h3 {
+      font-size: 0.88rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .why-item p {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* ── Internal links block ── */
+    .explore-section {
+      background: var(--white);
+      padding: 4rem 2rem;
+      border-top: 1px solid rgba(0,0,0,0.07);
+    }
+
+    .explore-inner {
       max-width: var(--max-w);
       margin: 0 auto;
     }
 
-    .video-section h2 {
-      font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+    .explore-inner h2 {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
       font-weight: 400;
-      color: var(--white);
-      margin-bottom: 0.5rem;
+      color: var(--dark);
+      margin-bottom: 1.5rem;
     }
 
-    .video-section-sub {
-      font-size: 0.88rem;
-      color: rgba(245,242,238,0.5);
-      font-style: italic;
-      margin-bottom: 2.5rem;
-    }
-
-    .video-grid {
+    .explore-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
+      gap: 1.25rem;
     }
 
-    .video-card { display: flex; flex-direction: column; }
-
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      background: var(--black);
+    .explore-link {
+      display: block;
+      padding: 1.25rem 1.5rem;
+      background: #f9f7f4;
+      border-top: 2px solid var(--gold);
+      transition: background 0.2s;
     }
 
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
+    .explore-link:hover { background: #f0ede8; }
 
-    .video-caption {
-      padding: 1rem 0 0;
-    }
-
-    .video-caption strong {
+    .explore-link strong {
       display: block;
       font-size: 0.82rem;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.4rem;
+      color: var(--dark);
+      margin-bottom: 0.3rem;
     }
 
-    .video-caption p {
+    .explore-link span {
       font-size: 0.82rem;
-      color: rgba(245,242,238,0.55);
-      line-height: 1.6;
+      color: var(--grey);
+      font-style: italic;
     }
+
+    /* ── Video section ── */
+    .video-section { background: var(--dark); padding: 5rem 2rem; }
+    .video-section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .video-section h2 { font-size: clamp(1.2rem, 2.2vw, 1.65rem); font-weight: 400; color: var(--white); margin-bottom: 0.5rem; }
+    .video-section-sub { font-size: 0.88rem; color: rgba(245,242,238,0.5); font-style: italic; margin-bottom: 2.5rem; }
+    .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+    .video-card { display: flex; flex-direction: column; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: var(--black); }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .video-caption { padding: 1rem 0 0; }
+    .video-caption strong { display: block; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+    .video-caption p { font-size: 0.82rem; color: rgba(245,242,238,0.55); line-height: 1.6; }
 
     /* ── CTA Banner ── */
-    .cta-banner {
-      background: var(--gold);
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .cta-banner h2 {
-      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
-      font-weight: 400;
-      color: var(--black);
-      margin-bottom: 0.75rem;
-    }
-
-    .cta-banner p {
-      font-size: 0.92rem;
-      color: rgba(10,10,10,0.75);
-      margin-bottom: 2rem;
-    }
-
-    .btn {
-      display: inline-block;
-      font-family: 'Georgia', serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      padding: 0.8rem 1.8rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .btn-dark {
-      background: var(--black);
-      color: var(--white);
-      border: 1px solid var(--black);
-    }
-
+    .cta-banner { background: var(--gold); padding: 4rem 2rem; text-align: center; }
+    .cta-banner h2 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); font-weight: 400; color: var(--black); margin-bottom: 0.75rem; }
+    .cta-banner p { font-size: 0.92rem; color: rgba(10,10,10,0.75); margin-bottom: 2rem; }
+    .btn { display: inline-block; font-family: 'Georgia', serif; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 0.8rem 1.8rem; cursor: pointer; transition: all 0.2s ease; }
+    .btn-dark { background: var(--black); color: var(--white); border: 1px solid var(--black); }
     .btn-dark:hover { background: var(--dark); }
 
     /* ── Footer ── */
-    .site-footer {
-      background: var(--black);
-      color: rgba(245,242,238,0.5);
-      padding: 3rem 2rem;
-    }
-
-    .footer-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-    }
-
-    .footer-brand p {
-      font-size: 0.8rem;
-      line-height: 1.7;
-      margin-top: 0.75rem;
-    }
-
-    .footer-nav-title,
-    .footer-contact-title {
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .footer-links a {
-      font-size: 0.82rem;
-      color: rgba(245,242,238,0.5);
-      transition: color 0.2s;
-    }
-
+    .site-footer { background: var(--black); color: rgba(245,242,238,0.5); padding: 3rem 2rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+    .footer-brand p { font-size: 0.8rem; line-height: 1.7; margin-top: 0.75rem; }
+    .footer-nav-title, .footer-contact-title { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-links a { font-size: 0.82rem; color: rgba(245,242,238,0.5); transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
-
     .footer-contact p { font-size: 0.82rem; line-height: 1.8; }
-
-    .footer-bottom {
-      max-width: var(--max-w);
-      margin: 2.5rem auto 0;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-    }
-
-    .footer-bottom a {
-      color: rgba(245,242,238,0.4);
-      transition: color 0.2s;
-    }
-
+    .footer-bottom { max-width: var(--max-w); margin: 2.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; }
+    .footer-bottom a { color: rgba(245,242,238,0.4); transition: color 0.2s; }
     .footer-bottom a:hover { color: var(--gold); }
 
     /* ── Responsive ── */
@@ -458,19 +316,17 @@
       .nav-toggle { display: flex; }
       .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.98); justify-content: center; align-items: center; gap: 2.5rem; z-index: 150; }
       .nav-links.open a { font-size: 1rem; letter-spacing: 0.2em; }
-
-      .page-hero-content {
-        right: 5%;
-        left: 5%;
-        bottom: 10%;
-        text-align: left;
-        max-width: 100%;
-      }
-
+      .page-hero-content { right: 5%; left: 5%; bottom: 10%; text-align: left; max-width: 100%; }
+      .credentials-strip-inner { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+      .explore-grid { grid-template-columns: 1fr; }
       .video-grid { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
       .section { padding: 3.5rem 1.25rem; }
       .video-section { padding: 3.5rem 1.25rem; }
+      .why-section { padding: 3.5rem 1.25rem; }
+      .explore-section { padding: 3rem 1.25rem; }
+      .credentials-strip { padding: 2.5rem 1.25rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -508,7 +364,7 @@
       <img
         class="page-hero-img"
         src="/images/hero.jpg"
-        alt="Dramatic black and white portrait by Peter Farrar Portraits"
+        alt="Peter Farrar — portrait photographer based in Basingstoke, Hampshire"
         width="1400"
         height="933"
         fetchpriority="high"
@@ -527,46 +383,134 @@
         <span class="section-label">Portrait Photographer · Author · Mentor</span>
 
         <p class="bio-intro">
-           <h2>Professional Portrait Photographer in Basingstoke</h2>
           Photography has been a lifelong passion and profession that has taken me across continents, introduced me to remarkable people, and allowed me to capture some of life's most important moments.
         </p>
-           <h2>Experience Across the UK and USA</h2>
-        <p>Over the years I have worked as a professional photographer in both the United States and the United Kingdom, specialising in portraits, weddings, special events, and commercial assignments. My career has provided opportunities to photograph people from all walks of life, helping individuals, families, professionals, performers, and businesses preserve memories and tell their stories through photography.</p>
+
+        <h2 id="bio-heading">Professional Portrait Photographer in Basingstoke</h2>
+        <p>Over the years I have worked as a professional photographer in both the United States and the United Kingdom, specialising in portraits, weddings, special events, and commercial assignments. My career has provided opportunities to photograph people from all walks of life — helping individuals, families, professionals, performers, and businesses preserve memories and tell their stories through photography.</p>
 
         <p>Today my primary focus is portrait photography in Hampshire and Basingstoke, creating professional portraits that capture personality, character, and genuine emotion. Whether working in a studio environment or on location, I strive to create images that feel natural, authentic, and timeless.</p>
 
         <!-- Experience -->
         <div class="bio-section">
-          <h2 id="bio-heading">Experience Beyond the Camera</h2>
+          <h2>Experience Across the UK and USA</h2>
+          <p>My photography career began in the United States, where I founded Kenneth Light Studios in Charlotte, North Carolina in 2008. Over the following years I built the business into a full-time professional photography studio, photographing weddings, portraits, commercial assignments and events across North Carolina and beyond.</p>
+          <p>After relocating to the United Kingdom in 2014, I continued to develop my skills and client base, photographing people across Hampshire and the South of England. In 2026, I rebranded to Peter Farrar Portraits to bring my name and my photography together under one consistent identity — the same approach, the same standard, the same commitment to creating portraits that last.</p>
           <p>My career has never been limited to photography alone. Throughout the years I have also worked on video and film projects for clients, gaining valuable experience in visual storytelling, lighting, composition, and creative direction. These skills continue to influence my photographic work today, helping me create images that go beyond simply recording a moment.</p>
-<h2>A Personal, People Focused Approach</h2>
-           <p>Photography is not just about technical ability. It is about understanding people. Every successful portrait begins with communication, trust, and creating an environment where clients feel comfortable and confident. This approach has helped me build lasting relationships with clients and produce portraits that reflect who they truly are.</p>
+        </div>
+
+        <!-- Approach -->
+        <div class="bio-section">
+          <h2>A People-Focused Approach to Portrait Photography</h2>
+          <p>Portrait photography is not just about technical ability — it is about understanding people. Every successful portrait begins with communication, trust, and creating an environment where clients feel comfortable and confident in front of the camera.</p>
+          <p>My sessions are unhurried by design. There is always time to settle in, try different approaches, and find the images that genuinely reflect who you are. I do not believe in rushing people or pushing for a result before the subject is ready. The best portraits come when people forget about the camera — and that takes time, patience, and the right atmosphere.</p>
+          <p>This approach has helped me build lasting relationships with clients and produce portraits that reflect who they truly are, not just how they look.</p>
         </div>
 
         <!-- Author -->
         <div class="bio-section">
-          <h2>Author, Mentor and Educator</h2>
-          <p>In addition to my work behind the camera, I am also a published author with books covering both photography and leadership. Writing has allowed me to share the lessons, techniques, and experiences gained throughout decades of professional work.</p>
-          <p>Teaching and mentoring others has always been important to me. Whether helping aspiring photographers develop their skills or sharing leadership principles developed through years of experience, I enjoy encouraging others to grow and reach their potential.</p>
+          <h2>Published Author and Photography Educator</h2>
+          <p>In addition to my work behind the camera, I am a published author with books covering both photography and leadership. <a href="https://www.peterfarrarbooks.com/" target="_blank" rel="noopener" style="color:var(--gold);">Peter Farrar Books</a> covers the full range of my writing work, including the Mastering Digital Photography three-volume series and The Complete Photography Field Guide — a 538-page reference covering technique, workflow, business, and UK and US photography law in a single volume.</p>
+          <p>Teaching and mentoring others has always been important to me. I have trained over 300 photographers throughout my career, sharing the techniques, approaches, and practical knowledge that come from decades of professional work. Whether helping aspiring photographers develop their skills or sharing leadership principles from my corporate career, I enjoy encouraging others to grow.</p>
         </div>
 
         <!-- Creativity -->
         <div class="bio-section">
           <h2>Creative Influences</h2>
-          <p>Creativity does not end when the camera is put away. I have a lifelong appreciation for music and enjoy exploring a wide variety of genres. Live music, in particular, has always inspired me through its energy, emotion, and ability to bring people together.</p>
-          <p>I am also passionate about film and cinema, appreciating the storytelling, visual artistry, and creativity that make great movies memorable. Many of the principles that make powerful films resonate with audiences can also be found in strong photography: composition, emotion, timing, and narrative.</p>
-          <p>Travel has played an important role throughout my life as well. Experiencing different places, cultures, and perspectives has helped shape both my personal outlook and my creative vision. Every destination offers new inspiration and a deeper appreciation for the diversity of people and experiences around us.</p>
+          <p>Creativity does not end when the camera is put away. I have a lifelong appreciation for music, film, and visual storytelling. Many of the principles that make powerful cinema resonate with audiences — composition, emotion, timing, and narrative — can also be found in strong portrait photography. Every portrait is a story, and finding that story is what drives my work.</p>
+          <p>Travel has played an important role throughout my life as well. Experiencing different places, cultures, and perspectives has shaped both my personal outlook and my creative vision. From the mountains of North Carolina to the Hampshire countryside, every environment offers new inspiration and a deeper appreciation for the diversity of people and the stories they carry.</p>
         </div>
 
         <!-- Local -->
         <div class="bio-section">
-          <h2>Portrait Photography Across Hampshire</h2>
-           <p>Based in Basingstoke, I work with clients throughout Hampshire and the surrounding areas, creating professional portraits for individuals, families, professionals, performers, and businesses.</p>
-           <p>With over 15 years of professional experience across the UK and USA, I bring a calm, client focused approach to every portrait session.</p>
-           <p>Whether you are looking for a professional headshot, family portrait, personal branding session, creative portrait, or a special commission, my goal remains the same: to create images that you will be proud to display and treasure for years to come.</p>
-          <p>Thank you for taking the time to visit my website. I look forward to meeting you and helping tell your story through photography.</p>
+          <h2>Portrait Photography Across Hampshire and Basingstoke</h2>
+          <p>Based in Basingstoke, I work with clients throughout Hampshire and the surrounding counties. Studio sessions take place in Basingstoke, offering full control of lighting and environment. Location sessions are available anywhere across Hampshire — from the countryside and villages of the Test Valley and Itchen Valley to urban settings in Winchester, Reading, Newbury and Farnborough.</p>
+          <p>Whether you are looking for a <a href="/investment" style="color:var(--gold);">professional headshot</a>, a relaxed family portrait, personal branding photography, or a creative commission, my goal is the same: to create images that you will be proud to display and treasure for years to come.</p>
+          <p>Thank you for taking the time to visit. I look forward to meeting you and helping tell your story through photography.</p>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ── Credentials Strip ── -->
+    <section class="credentials-strip" aria-label="Credentials">
+      <div class="credentials-strip-inner">
+        <div class="cred-item">
+          <span class="cred-num">18+</span>
+          <span class="cred-label">Years Experience</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-num">300+</span>
+          <span class="cred-label">Photographers Trained</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-num">2008</span>
+          <span class="cred-label">Founded</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-num">5</span>
+          <span class="cred-label">Published Books</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why Peter ── -->
+    <section class="why-section" aria-labelledby="why-heading">
+      <div class="why-inner">
+        <span class="section-label">Why Peter Farrar Portraits</span>
+        <h2 id="why-heading">What Makes the Difference</h2>
+        <p style="font-size:0.95rem; color:#555; max-width:680px; line-height:1.75;">Portrait photography in Basingstoke is competitive. Here is what sets Peter Farrar Portraits apart from the rest.</p>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>18 Years of Professional Experience</h3>
+            <p>Founded in 2008, Peter Farrar Portraits brings genuine long-term professional experience to every session. This is not a side project or a hobby — it is a dedicated portrait photography practice built over nearly two decades across two countries.</p>
+          </div>
+          <div class="why-item">
+            <h3>Unhurried, Client-Focused Sessions</h3>
+            <p>Sessions are never rushed. The time is taken to make sure every client feels comfortable, confident, and ready — because the best portraits come when people relax, not when they are under pressure.</p>
+          </div>
+          <div class="why-item">
+            <h3>Published Photography Expert</h3>
+            <p>As the author of The Complete Photography Field Guide and the Mastering Digital Photography series, the technical knowledge behind every session is grounded in deep, published expertise — not just practice.</p>
+          </div>
+          <div class="why-item">
+            <h3>Studio and Location Flexibility</h3>
+            <p>A fully equipped studio in Basingstoke plus the flexibility to shoot anywhere across Hampshire and the surrounding counties means every session can be tailored to exactly the environment that suits you best.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Explore the Site ── -->
+    <section class="explore-section" aria-labelledby="explore-heading">
+      <div class="explore-inner">
+        <h2 id="explore-heading">Explore Peter Farrar Portraits</h2>
+        <div class="explore-grid">
+          <a href="/portrait-gallery" class="explore-link">
+            <strong>Portrait Gallery</strong>
+            <span>View a selection of portrait work</span>
+          </a>
+          <a href="/investment" class="explore-link">
+            <strong>Investment</strong>
+            <span>Session types, what's included and how to book</span>
+          </a>
+          <a href="/contact" class="explore-link">
+            <strong>Book a Session</strong>
+            <span>Get in touch to discuss your portrait</span>
+          </a>
+          <a href="/blog/index" class="explore-link">
+            <strong>The Journal</strong>
+            <span>Photography insights and session stories</span>
+          </a>
+          <a href="https://www.peterfarrarbooks.com/" target="_blank" rel="noopener" class="explore-link">
+            <strong>Author Site</strong>
+            <span>Photography and leadership books by Peter Farrar</span>
+          </a>
+          <a href="/contact" class="explore-link">
+            <strong>Contact</strong>
+            <span>Email Peter directly — response within one working day</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -578,7 +522,6 @@
         <p class="video-section-sub">A selection of film and testimonial work from across the years.</p>
 
         <div class="video-grid">
-
           <article class="video-card">
             <div class="video-wrapper">
               <iframe
@@ -629,7 +572,6 @@
               <p>A behind-the-scenes time-lapse filmed in my Charlotte, North Carolina studio featuring my good friend Amy Castro HMUA.</p>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -663,10 +605,9 @@
           <li><a href="/privacy-policy">Privacy Policy</a></li>
         </ul>
       </nav>
-<div class="footer-contact">
+      <div class="footer-contact">
         <p class="footer-contact-title">Get in Touch</p>
         <p>Based in Basingstoke, Hampshire<br>Serving Hampshire &amp; surrounding counties</p>
-        <!-- ADD HERE -->
         <p class="footer-nav-title" style="margin-top:1.5rem;">Follow</p>
         <ul class="footer-links" role="list">
           <li><a href="https://www.facebook.com/peterfarrarportraits" target="_blank" rel="noopener">Facebook</a></li>
@@ -676,20 +617,18 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom"> 
-       <span>© 2026 Peter Farrar Portraits. All rights reserved.</span>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Peter Farrar Portraits. All rights reserved.</span>
       <a href="/privacy-policy">Privacy Policy</a>
     </div>
   </footer>
 
   <script>
-    // Scroll-aware nav background
     const nav = document.getElementById('site-nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
-    // Mobile hamburger
     const toggle = document.getElementById('nav-toggle');
     const links  = document.getElementById('nav-links');
     toggle.addEventListener('click', () => {
