@@ -1175,13 +1175,13 @@
           <li><a href="/about-peter-farrar">About</a></li>
           <li><a href="/portrait-gallery">Gallery</a></li>
           <li><a href="/investment">Investment</a></li>
-          <li><a href="/blog/">Journal</a></li>
+          <li><a href="/blog/index">Journal</a></li>
           <li><a href="/peter-farrar-books">Books Site</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/privacy-policy">Privacy Policy</a></li>
         </ul>
       </nav>
-             <div class="footer-contact">
+           <div class="footer-contact">
         <p class="footer-contact-title">Get in Touch</p>
         <p>Based in Basingstoke, Hampshire<br>Serving Hampshire &amp; surrounding counties</p>
         <p><a href="tel:07508587142" style="color:rgba(245,242,238,0.5);">07508 587142</a></p>
@@ -1203,13 +1203,11 @@
   </footer>
 
   <script>
-    // Scroll-aware nav background
     const nav = document.getElementById('site-nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
-    // Mobile hamburger
     const toggle = document.getElementById('nav-toggle');
     const links  = document.getElementById('nav-links');
     toggle.addEventListener('click', () => {
