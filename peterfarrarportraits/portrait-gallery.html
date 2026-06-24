@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-08STG260DS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-08STG260DS');
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-08STG260DS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-08STG260DS');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,31 +38,47 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
 
   <!-- JSON-LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageGallery",
-    "name": "Peter Farrar Portraits — Portrait Photography Gallery",
-    "description": "A selection of studio and location portrait photography by Peter Farrar, based in Basingstoke, Hampshire.",
-    "url": "https://www.peterfarrarportraits.com/portrait-gallery",
-    "author": {
-      "@type": "Person",
-      "name": "Peter Farrar",
-      "url": "https://www.peterfarrarportraits.com/about-peter-farrar"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ImageGallery",
+      "name": "Peter Farrar Portraits — Portrait Photography Gallery",
+      "description": "A selection of studio and location portrait photography by Peter Farrar, based in Basingstoke, Hampshire.",
+      "url": "https://www.peterfarrarportraits.com/portrait-gallery",
+      "author": {
+        "@type": "Person",
+        "name": "Peter Farrar",
+        "url": "https://www.peterfarrarportraits.com/about-peter-farrar"
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.peterfarrarportraits.com/#business",
+        "name": "Peter Farrar Portraits",
+        "url": "https://www.peterfarrarportraits.com/"
+      }
     },
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Peter Farrar Portraits",
-      "url": "https://www.peterfarrarportraits.com/",
-      "sameAs": [
-        "https://www.facebook.com/peterfarrarportraits",
-        "https://www.instagram.com/peterfarrarportraits",
-        "https://x.com/peterfportraits",
-        "https://www.threads.com/@peterfarrarportraits"
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.peterfarrarportraits.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Gallery",
+          "item": "https://www.peterfarrarportraits.com/portrait-gallery"
+        }
       ]
     }
-  }
-  </script>
+  ]
+}
+</script>
   <style>
     /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -252,7 +268,7 @@
       <div class="page-hero-overlay" aria-hidden="true"></div>
       <div class="page-hero-content">
         <span class="page-eyebrow">Basingstoke &amp; Hampshire</span>
-        <h1>Portrait Photography Gallery</h1>
+        <h1><h1>Portrait Photography Gallery — Basingstoke and Hampshire</h1></h1>
       </div>
     </div>
 
@@ -261,9 +277,9 @@
       <div class="section-inner">
         <span class="section-label">Portfolio</span>
         <h2 id="gallery-intro-heading">Portrait Photography Portfolio</h2>
-        <p>The portraits in this gallery represent a wide range of clients, sessions, and stories — from intimate studio portraits to relaxed location shoots across Hampshire. Each image is the result of a genuine conversation, a moment of trust, and a shared commitment to creating something lasting.</p>
+        <p>The portraits in this gallery represent a wide range of clients, sessions, and stories, from intimate studio portraits to relaxed location shoots across Hampshire. Each image is the result of a genuine conversation, a moment of trust, and a shared commitment to creating something lasting.</p>
         <p>No two sessions are alike. Whether capturing the quiet confidence of a professional headshot in Basingstoke, the warmth of a family group, or the personality of an individual portrait, the goal is always the same: an honest image that the subject will be proud to display for years to come.</p>
-        <p>The work shown here spans individual portraits, couples, family sessions, and professional headshots — shot in the studio and on location across Hampshire. Every portrait in this gallery began with a conversation and ended with an image that meant something to the person in it.</p>
+        <p>The work shown here spans individual portraits, couples, family sessions, and professional headshots, shot in the studio and on location across Hampshire. Every portrait in this gallery began with a conversation and ended with an image that meant something to the person in it.</p>
       </div>
     </section>
 
@@ -396,7 +412,7 @@
       <div class="gallery-below-inner">
         <span class="section-label">Book Your Session</span>
         <h2 id="sessions-heading">Studio and Location Portraits Across Hampshire</h2>
-        <p>Whether you have a clear vision or simply know you want something special, every session begins with a conversation. There is no rush, no rigid format, and no one-size-fits-all approach — just thoughtful, unhurried portrait photography tailored entirely to you.</p>
+        <p>Whether you have a clear vision or simply know you want something special, every session begins with a conversation. There is no rush, no rigid format, and no one-size-fits-all approach, just thoughtful, unhurried portrait photography tailored entirely to you.</p>
         <p>Studio sessions are available at my Basingstoke base, and location sessions can be arranged throughout Hampshire and the surrounding counties. The studio provides full control of light and environment, ideal for professional headshots, individual portraits and family sessions where consistency matters. Location sessions bring a natural quality that suits couples, families, and personal branding work especially well.</p>
 
         <h2>Types of Portrait Sessions</h2>
@@ -427,7 +443,7 @@
         <div>
           <span class="section-label" style="color:var(--gold);">The Approach</span>
           <h2 id="approach-heading">Portrait Photography Rooted in People, Not Technique</h2>
-          <p>The portraits in this gallery were not made by technique alone. They were made by creating the right conditions — a calm atmosphere, a genuine conversation, enough time to let the subject settle, and the patience to wait for something real.</p>
+          <p>The portraits in this gallery were not made by technique alone. They were made by creating the right conditions, a calm atmosphere, a genuine conversation, enough time to let the subject settle, and the patience to wait for something real.</p>
           <p>Technical skill matters. Lighting, composition, and timing all contribute to a strong portrait. But they are tools, not the point. The point is the person. A technically perfect image of someone who looks uncomfortable is not a good portrait. A technically simple image of someone who is completely themselves can be extraordinary.</p>
           <p>This is the standard every session at Peter Farrar Portraits is held to. Visit the <a href="/about-peter-farrar">about page</a> to learn more about the experience and approach behind the work, or <a href="/investment">explore the investment page</a> to discuss your own session.</p>
         </div>
@@ -457,7 +473,7 @@
       <div class="gallery-local-inner">
         <span class="section-label">Where I Work</span>
         <h2 id="local-heading">Portrait Photography in Basingstoke and Across Hampshire</h2>
-        <p>The portraits shown here were created across a range of locations — studios and homes, countryside and urban settings, in North Carolina and Hampshire. Today, all new sessions take place from my base in Basingstoke, covering Hampshire and the surrounding counties.</p>
+        <p>The portraits shown here were created across a range of locations, studios and homes, countryside and urban settings, in North Carolina and Hampshire. Today, all new sessions take place from my base in Basingstoke, covering Hampshire and the surrounding counties.</p>
         <p>If you are looking for a portrait photographer in Basingstoke, Winchester, Andover, Newbury, Farnborough, Reading or anywhere across Hampshire, <a href="/contact">get in touch</a> to discuss availability and what is right for your session.</p>
         <div class="area-list" aria-label="Areas served">
           <span class="area-tag">Basingstoke</span>
