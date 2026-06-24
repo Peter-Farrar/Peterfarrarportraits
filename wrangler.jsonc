@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "peterfarrarportraits",
+  "compatibility_date": "2026-05-01",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "peterfarrarportraits"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
