@@ -37,25 +37,31 @@
     <priority>0.8</priority>
   </url>
   <url>
-  <loc>https://www.peterfarrarportraits.com/blog/</loc>
+  <loc>https://www.peterfarrarportraits.com/blog</loc>
   <lastmod>2026-06-26</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
   <url>
-    <loc>https://www.peterfarrarportraits.com/blog/basingstoke-portrait-photographer.html</loc>
+    <loc>https://www.peterfarrarportraits.com/blog/building-confidence</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.peterfarrarportraits.com/blog/basingstoke-portrait-photographer</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.peterfarrarportraits.com/blog/portrait-of-a-fighter.html</loc>
+    <loc>https://www.peterfarrarportraits.com/blog/portrait-of-a-fighter</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.peterfarrarportraits.com/blog/a-busy-few-weeks-behind-the-scenes.html</loc>
+    <loc>https://www.peterfarrarportraits.com/blog/a-busy-few-weeks-behind-the-scenes</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
