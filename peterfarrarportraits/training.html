@@ -537,16 +537,22 @@
           </div>
 
           <div>
-            <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
-           <form class="enquiry-form" action="https://formspree.io/f/meajdrew" method="POST" id="enquiry-form" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Your Name <span aria-hidden="true">*</span></label>
-                  <input type="text" id="name" name="name" autocomplete="name" required />
-                </div>
-                <div class="form-group">
-                  <label for="email">Email Address <span aria-hidden="true">*</span></label>
-                  <input type="email" id="email" name="email" autocomplete="email" required />
+			  <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/meajdrew"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your file:
+    <input type="file" name="upload">
+  </label>
+  <button type="submit">Send</button>
+</form>
                 </div>
               </div>
               <div class="form-row">
