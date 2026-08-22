@@ -600,49 +600,55 @@ Pasted text(10)-fixed.html
             </div>
           </div>
 
-          <div>
-            <form class="enquiry-form" action="https://formspree.io/f/meajdrew" method="POST" id="enquiry-form" enctype="multipart/form-data">
+     <div>
+  <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="email">Email Address <span aria-hidden="true">*</span></label>
-                  <input type="email" id="email" name="email" autocomplete="email" required />
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" autocomplete="tel" />
-                </div>
-              </div>
+  <form class="enquiry-form" action="https://formspree.io/f/meajdrew" method="POST" id="enquiry-form" novalidate>
 
-              <div class="form-group">
-                <label for="session-type">Training Type</label>
-                <select id="session-type" name="session_type">
-                  <option value="" disabled selected>Please select...</option>
-                  <option value="Individual Training">Individual Training</option>
-                  <option value="Group Training">Group Training</option>
-                </select>
-              </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Your Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" required />
+      </div>
 
-              <div class="form-group">
-                <label for="message">Your Message <span aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" required placeholder="Let me know the training you need, Basic, Intermediate or Advanced"></textarea>
-              </div>
+      <div class="form-group">
+        <label for="email">Email Address <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
+      </div>
+    </div>
 
-              <div class="form-group">
-                <label for="upload">Upload File</label>
-                <input type="file" id="upload" name="upload" />
-              </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" />
+      </div>
 
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-              <input type="hidden" name="_subject" value="New Training enquiry — peterfarrarportraits.com" />
+      <div class="form-group">
+        <label for="session-type">Training Type</label>
+        <select id="session-type" name="session_type">
+          <option value="" disabled selected>Please select…</option>
+          <option value="Individual Training">Individual Training</option>
+          <option value="Group Training">Group Training</option>
+        </select>
+      </div>
+    </div>
 
-              <p class="form-note">Fields marked * are required. Your details will never be shared with third parties.</p>
+    <div class="form-group">
+      <label for="message">Your Message <span aria-hidden="true">*</span></label>
+      <textarea id="message" name="message" required placeholder="Let me know the training you need, Basic, Intermediate or Advanced"></textarea>
+    </div>
 
-              <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-              <button type="submit" class="form-submit">Send Enquiry</button>
-            </form>
-          </div>
+    <input type="hidden" name="_subject" value="New Training enquiry — peterfarrarportraits.com" />
+
+    <p class="form-note">Fields marked * are required. Your details will never be shared with third parties.</p>
+
+    <button type="submit" class="form-submit">Send Enquiry</button>
+
+  </form>
+</div>
+		</div>
           </div>
         </div>
       </div>
