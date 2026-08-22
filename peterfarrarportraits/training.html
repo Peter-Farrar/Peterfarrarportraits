@@ -535,24 +535,17 @@
               </div>
             </div>
           </div>
-
-          <div>
-			 
-<form
-  action="https://formspree.io/f/meajdrew"
-  method="POST"
-  enctype="multipart/form-data"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your file:
-    <input type="file" name="upload">
-  </label>
-  <button type="submit">Send</button>
-</form>
+         <div>
+            <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+            <form class="enquiry-form" action="https://formspree.io/f/meajdrew" method="POST" id="enquiry-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" autocomplete="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email" required />
                 </div>
               </div>
               <div class="form-row">
@@ -564,22 +557,23 @@
                   <label for="session-type">Training Type</label>
                   <select id="session-type" name="session_type">
                     <option value="" disabled selected>Please select…</option>
-                    <option value="Individual Training">Individual Training</option>
-                    <option value="Group Training">Group Training</option>
-                    </select>
+                    <option value="Individual Portrait">Individual Training</option>
+                    <option value="Family Portrait">Group Training</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
                 <label for="message">Your Message <span aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" required placeholder="Let me know the training you need, Basic, Intermediate or Advanced"></textarea>
+                <textarea id="message" name="message" required placeholder="Tell me a little about what you are looking for, any dates in mind, or any questions you have…"></textarea>
               </div>
               <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-              <input type="hidden" name="_subject" value="New Training enquiry — peterfarrarportraits.com" />
+              <input type="hidden" name="_subject" value="New Training Enquiry — peterfarrarportraits.com" />
               <p class="form-note">Fields marked * are required. Your details will never be shared with third parties.</p>
               <button type="submit" class="form-submit">Send Enquiry</button>
             </form>
           </div>
-        </div>
+
+		</div>
       </div>
     </section>
 
