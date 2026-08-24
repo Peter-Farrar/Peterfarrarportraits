@@ -9,7 +9,7 @@ Website: https://peterfarrarportraits.com
 This website is hosted using GitHub Pages.
 
 ## Technology
-
+ 
 Static HTML
 CSS
 JavaScript
